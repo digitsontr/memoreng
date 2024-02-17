@@ -57,7 +57,7 @@ jobs:
                 mkdir deploydevelop
                 mv deploydevelop-.git deploydevelop/.git
                 cd deploydevelop
-                cp -R ../bin/Release/net7.0/publish .
+                cp -R ../WordsAPI.API/bin/Release/net7.0/publish .
                 git add .
                 git diff --staged --quiet || git commit -m "Update Artifacts"
                 git push
