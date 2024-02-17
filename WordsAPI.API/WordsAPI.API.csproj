@@ -12,7 +12,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Develop|AnyCPU' ">
     <IntermediateOutputPath>obj\Develop</IntermediateOutputPath>
     <DebugSymbols>false</DebugSymbols>
-    <DebugType></DebugType>
+    <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Develop</OutputPath>
     <DefineConstants></DefineConstants>
