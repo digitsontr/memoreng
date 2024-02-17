@@ -3,7 +3,7 @@ name: create-release
 on:
     push:
         branches:
-            - 'master'
+            - 'main'
 jobs:
     build:
         name: create-release
@@ -57,7 +57,7 @@ jobs:
                 mkdir deploy
                 mv deploy-.git deploy/.git
                 cd deploy
-                cp -R ../bin/Release/net7.0/publish .
+                cp -R ../WordsAPI.API/bin/Release/net6.0/publish .
                 git add .
                 git diff --staged --quiet || git commit -m "Update Artifacts"
                 git push
