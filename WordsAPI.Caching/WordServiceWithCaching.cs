@@ -437,6 +437,19 @@ namespace WordsAPI.Caching
 
             return null;
         }
+
+        public async Task<CustomResponseDto<List<WordDTO>>> SaveAll(List<WordDTO> words)
+        {
+            List<WordDTO> wordsEntity = new List<WordDTO>();
+            foreach (var word in words)
+            {
+                CustomResponseDto<WordDTO> wordEntity = await this.Save(word);
+
+                wordsEntity.Add(wordEntity.Data);
+            }
+
+            return CustomResponseDto<List<WordDTO>>.Success(201, wordsEntity);
+        }
     }
 }
 

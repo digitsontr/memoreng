@@ -51,6 +51,12 @@ namespace WordsAPI.Controllers
             return CreateActionResult(await _englishService.Save(word));
         }
 
+        [HttpPost("addrange")]
+        public async Task<IActionResult> SaveAll(List<WordDTO> words)
+        {
+            return CreateActionResult(await _englishService.SaveAll(words));
+        }
+
         [HttpPut]
         public async Task<IActionResult> Update(WordDTO word)
         {
