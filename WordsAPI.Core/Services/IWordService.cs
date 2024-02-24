@@ -12,6 +12,7 @@ namespace WordsAPI.Core.Services
         Task<Dictionary<string, IWord>> GetOrCreateTranslations(List<string> translations);
         Task<Dictionary<string, Category>> GetOrCreateItemCategory(List<string> categories);
         Task<CustomResponseDto<WordDTO>> Save(WordDTO word);
+        Task<CustomResponseDto<List<WordDTO>>> SaveAll(List<WordDTO> words);
         Task<CustomResponseDto<WordDTO>> Delete(int id);
     }
 }
